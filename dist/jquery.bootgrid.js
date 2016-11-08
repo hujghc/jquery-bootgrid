@@ -323,7 +323,7 @@
         if (this.options.navigation & 2)
         {
             this.footer = $(tpl.footer.resolve(getParams.call(this, { id: this.element._bgId() + "-footer" })));
-            wrapper.after(this.footer);
+	    (this.options.footer == undefined ? wrapper : $(this.options.footer)).after(this.footer);
         }
     }
 
